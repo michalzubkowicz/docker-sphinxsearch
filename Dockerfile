@@ -18,7 +18,7 @@ COPY ./entrypoint.sh /sbin/entrypoint.sh
 
 RUN	buildDeps='software-properties-common python-software-properties' \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends \
-	&& add-apt-repository -y ppa:builds/sphinxsearch-rel22 \
+	&& add-apt-repository -y ppa:builds/sphinxsearch-rel21 \
 	&& apt-get update \
 	&& apt-get install -y sphinxsearch \
 	&& mv -f /etc/sphinxsearch/sphinx.conf /etc/sphinxsearch/origin.sphinx.conf \
