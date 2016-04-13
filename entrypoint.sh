@@ -70,7 +70,7 @@ sed -i "s~SPHINX_LOG_DIR~${SPHINX_LOG_DIR}~g" ${SPHINX_CONF}
 sed -i "s~SPHINX_RUN~${SPHINX_RUN}~g" ${SPHINX_CONF}
 
 if [[ ${SPHINX_MODE} == indexing ]]; then
- indexer --config ${SPHINX_CONF} --all
+ indexer --config ${SPHINX_CONF} --all --rotate
 fi
 
 if [[ ${SPHINX_MODE} == backup ]]; then
